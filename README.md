@@ -1,6 +1,6 @@
 # Glass — ISC DHCP Monitor
 
-A modern web interface for ISC DHCP servers. Real-time lease tracking, log streaming, subnet utilization, config editing, and alerting — rebuilt with an Angular 17 frontend.
+A modern web interface for ISC DHCP servers. Real-time lease tracking, log streaming, subnet utilization, config editing, and alerting — rebuilt with an Angular 21 frontend.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -24,8 +24,8 @@ A modern web interface for ISC DHCP servers. Real-time lease tracking, log strea
 
 | Layer | Technology |
 |---|---|
-| Backend | Node.js + Express |
-| Frontend | Angular 17 (standalone components) |
+| Backend | Node.js 20 + Express 4 |
+| Frontend | Angular 21 (standalone components) |
 | Styling | Tailwind CSS v3 + OKLCH design tokens |
 | Live data | WebSocket (ws) |
 
@@ -38,8 +38,8 @@ A modern web interface for ISC DHCP servers. Real-time lease tracking, log strea
 ```bash
 sudo apt update && sudo apt upgrade -y
 
-# Node.js 18.x
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+# Node.js 20.x (required)
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
 
 # ISC DHCP server (if not already installed)
