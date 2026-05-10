@@ -2,16 +2,15 @@ import {
   Component, OnInit, OnDestroy, inject, signal, computed,
   ViewChild, ElementRef, AfterViewChecked,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { WebsocketService } from '../../core/services/websocket.service';
 import { Subscription, Subject, debounceTime, distinctUntilChanged } from 'rxjs';
 
 @Component({
-  selector: 'app-log',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  template: `
+    selector: 'app-log',
+    imports: [FormsModule],
+    template: `
     <div class="log-page">
       <!-- Toolbar -->
       <div class="toolbar">
@@ -57,7 +56,7 @@ import { Subscription, Subject, debounceTime, distinctUntilChanged } from 'rxjs'
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .log-page {
       padding: 24px;
       display: flex;
@@ -147,7 +146,7 @@ import { Subscription, Subject, debounceTime, distinctUntilChanged } from 'rxjs'
       font-family: Inter, sans-serif;
     }
     .empty-text { font-size: 0.875rem; }
-  `],
+  `]
 })
 export class LogComponent implements OnInit, OnDestroy, AfterViewChecked {
   private ws = inject(WebsocketService);

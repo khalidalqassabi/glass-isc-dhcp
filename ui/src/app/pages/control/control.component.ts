@@ -6,10 +6,9 @@ type ConfirmAction = 'stop' | 'restart' | null;
 type ActionStatus = 'idle' | 'pending' | 'success' | 'error';
 
 @Component({
-  selector: 'app-control',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-control',
+    imports: [CommonModule],
+    template: `
     <div class="page">
       <div class="page-header">
         <h1 class="page-title">Server Control</h1>
@@ -136,7 +135,7 @@ type ActionStatus = 'idle' | 'pending' | 'success' | 'error';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .page { padding: 28px 32px; max-width: 820px; display: flex; flex-direction: column; gap: 20px; }
     .page-header { margin: 0; }
     .page-title { font-size: 1.125rem; font-weight: 600; color: var(--c-text-1); margin: 0 0 4px; }
@@ -209,7 +208,7 @@ type ActionStatus = 'idle' | 'pending' | 'success' | 'error';
 
     .spin-inline { display: inline-block; animation: spin 1s linear infinite; }
     @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-  `],
+  `]
 })
 export class ControlComponent implements OnInit {
   private api = inject(GlassApiService);

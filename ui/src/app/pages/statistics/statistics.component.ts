@@ -17,10 +17,9 @@ interface RequestRow {
 }
 
 @Component({
-  selector: 'app-statistics',
-  standalone: true,
-  imports: [CommonModule],
-  styles: [`
+    selector: 'app-statistics',
+    imports: [CommonModule],
+    styles: [`
     .page { padding: 24px; max-width: 1200px; margin: 0 auto; }
 
     .page-title {
@@ -141,7 +140,7 @@ interface RequestRow {
       font-variant-numeric: tabular-nums;
     }
   `],
-  template: `
+    template: `
     <div class="page">
       <h1 class="page-title">Statistics</h1>
 
@@ -238,7 +237,7 @@ interface RequestRow {
 
       </div>
     </div>
-  `,
+  `
 })
 export class StatisticsComponent implements OnInit {
   private api = inject(GlassApiService);

@@ -5,10 +5,9 @@ import { WebsocketService } from '../../core/services/websocket.service';
 import { GlassApiService } from '../../core/services/glass-api.service';
 
 @Component({
-  selector: 'app-shell',
-  standalone: true,
-  imports: [RouterOutlet, SidebarComponent],
-  template: `
+    selector: 'app-shell',
+    imports: [RouterOutlet, SidebarComponent],
+    template: `
     <div class="app-shell">
       <app-sidebar />
       <main class="main-content">
@@ -16,7 +15,7 @@ import { GlassApiService } from '../../core/services/glass-api.service';
       </main>
     </div>
   `,
-  styles: [`
+    styles: [`
     .app-shell {
       display: flex;
       min-height: 100vh;

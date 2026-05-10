@@ -1,5 +1,5 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { GlassApiService } from '../../core/services/glass-api.service';
 import { catchError, of } from 'rxjs';
 
@@ -13,10 +13,9 @@ interface Snapshot {
 }
 
 @Component({
-  selector: 'app-snapshots',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-snapshots',
+    imports: [],
+    template: `
     <div class="page">
       <div class="page-header">
         <h1 class="page-title">Config Snapshots</h1>
@@ -93,7 +92,7 @@ interface Snapshot {
       }
     </div>
   `,
-  styles: [`
+    styles: [`
     .page { padding: 28px 32px; max-width: 900px; }
     .page-header { margin-bottom: 24px; }
     .page-title { font-size: 1.125rem; font-weight: 600; color: var(--c-text-1); margin: 0 0 4px; }
@@ -129,7 +128,7 @@ interface Snapshot {
       line-height: 1.65; color: var(--c-text-1); overflow-x: auto;
       max-height: 400px; overflow-y: auto; white-space: pre-wrap; word-break: break-all;
     }
-  `],
+  `]
 })
 export class SnapshotsComponent implements OnInit {
   private api = inject(GlassApiService);

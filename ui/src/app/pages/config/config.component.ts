@@ -1,15 +1,14 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { GlassApiService } from '../../core/services/glass-api.service';
 
 type SaveStatus = 'idle' | 'saving' | 'saved' | 'error';
 
 @Component({
-  selector: 'app-config',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  template: `
+    selector: 'app-config',
+    imports: [FormsModule],
+    template: `
     <div class="config-page">
       <!-- Toolbar -->
       <div class="toolbar">
@@ -72,7 +71,7 @@ type SaveStatus = 'idle' | 'saving' | 'saved' | 'error';
       }
     </div>
   `,
-  styles: [`
+    styles: [`
     .config-page {
       padding: 24px;
       display: flex;
@@ -159,7 +158,7 @@ type SaveStatus = 'idle' | 'saving' | 'saved' | 'error';
     .spin { animation: spin 1s linear infinite; }
 
     button[disabled] { opacity: 0.5; cursor: not-allowed; }
-  `],
+  `]
 })
 export class ConfigComponent implements OnInit {
   private api = inject(GlassApiService);

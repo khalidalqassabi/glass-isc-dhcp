@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, inject, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { GlassApiService, Lease } from '../../core/services/glass-api.service';
 import { debounceTime, distinctUntilChanged, Subject, switchMap, Subscription } from 'rxjs';
@@ -16,10 +16,9 @@ interface LeaseRow {
 }
 
 @Component({
-  selector: 'app-leases',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  styles: [`
+    selector: 'app-leases',
+    imports: [FormsModule],
+    styles: [`
     .page { padding: 24px; max-width: 1200px; margin: 0 auto; }
 
     .page-header {
@@ -187,7 +186,7 @@ interface LeaseRow {
 
     .text-secondary { color: var(--c-text-2); }
   `],
-  template: `
+    template: `
     <div class="page">
 
       <!-- Header -->
@@ -302,7 +301,7 @@ interface LeaseRow {
 
       </div>
     </div>
-  `,
+  `
 })
 export class LeasesComponent implements OnInit, OnDestroy {
   private api = inject(GlassApiService);

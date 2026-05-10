@@ -15,10 +15,9 @@ interface SubnetRow {
 }
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [CommonModule],
-  styles: [`
+    selector: 'app-dashboard',
+    imports: [CommonModule],
+    styles: [`
     .page { padding: 24px; max-width: 1200px; margin: 0 auto; }
 
     .page-header {
@@ -167,7 +166,7 @@ interface SubnetRow {
     .text-primary { color: var(--c-text-1); }
     .text-secondary { color: var(--c-text-2); }
   `],
-  template: `
+    template: `
     <div class="page">
 
       <!-- Header -->
@@ -273,7 +272,7 @@ interface SubnetRow {
       </div>
 
     </div>
-  `,
+  `
 })
 export class DashboardComponent implements OnInit, OnDestroy {
   private api = inject(GlassApiService);

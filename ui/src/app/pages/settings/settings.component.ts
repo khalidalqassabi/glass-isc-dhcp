@@ -1,13 +1,12 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { GlassApiService, GlassConfig } from '../../core/services/glass-api.service';
 
 @Component({
-  selector: 'app-settings',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  template: `
+    selector: 'app-settings',
+    imports: [FormsModule],
+    template: `
     <div class="page">
       <div class="page-header">
         <h1 class="page-title">Settings</h1>
@@ -101,7 +100,7 @@ import { GlassApiService, GlassConfig } from '../../core/services/glass-api.serv
       }
     </div>
   `,
-  styles: [`
+    styles: [`
     .page { padding: 28px 32px; max-width: 900px; }
     .page-header { margin-bottom: 28px; }
     .page-title { font-size: 1.125rem; font-weight: 600; color: var(--c-text-1); margin: 0 0 4px; }

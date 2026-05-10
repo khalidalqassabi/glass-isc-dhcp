@@ -1,6 +1,6 @@
 import { Component, inject, signal, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { CommonModule } from '@angular/common';
+
 import { WebsocketService, DhcpStats } from '../../core/services/websocket.service';
 import { GlassApiService } from '../../core/services/glass-api.service';
 
@@ -11,10 +11,9 @@ interface NavItem {
 }
 
 @Component({
-  selector: 'app-sidebar',
-  standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule],
-  template: `
+    selector: 'app-sidebar',
+    imports: [RouterLink, RouterLinkActive],
+    template: `
     <aside class="sidebar">
       <!-- Logo -->
       <div class="sidebar-logo">
@@ -81,7 +80,7 @@ interface NavItem {
       </div>
     </aside>
   `,
-  styles: [`
+    styles: [`
     .sidebar {
       width: 220px;
       min-width: 220px;
