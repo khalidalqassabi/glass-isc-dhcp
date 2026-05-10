@@ -66,6 +66,10 @@ app.get('*', function(req, res, next) {
 	if (req.path.startsWith('/api/') || req.path.startsWith('/dhcp_') || req.path.startsWith('/glass_') || req.path.startsWith('/get_stats')) {
 		return next();
 	}
+	// Let static files (.js, .css, .ico, etc.) 404 naturally — don't serve index.html for them
+	if (/\.[a-zA-Z0-9]+$/.test(req.path)) {
+		return next();
+	}
 	var angularIndex = path.join(__dirname, 'public/dist/browser/index.html');
 	var fs = require('fs');
 	if (fs.existsSync(angularIndex)) {
