@@ -1,0 +1,7 @@
+node_modules/
+ui/node_modules/
+logs/
+*.log
+public/dist/
+config/glass_config.json
+.env

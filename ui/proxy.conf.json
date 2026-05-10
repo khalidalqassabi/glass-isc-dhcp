@@ -1,0 +1,35 @@
+{
+  "/api": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/glass_settings_save": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/glass_alert_settings_save": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/dhcp_config_save": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/dhcp_config_snapshots": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/dhcp_start_stop_restart": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/dhcp_config": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/dhcp_log": {
+    "target": "http://localhost:3000",
+    "secure": false
+  }
+}

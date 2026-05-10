@@ -1,0 +1,17 @@
+{
+  "leases_file": "/var/lib/dhcp/dhcpd.leases",
+  "log_file": "/var/log/syslog",
+  "config_file": "/etc/dhcp/dhcpd.conf",
+  "port": 3000,
+  "ws_port": 8080,
+  "admin_user": "admin",
+  "admin_password": "changeme",
+  "ip_ranges_to_allow": [""],
+  "leases_per_minute_threshold": "50",
+  "shared_network_warning_threshold": "0",
+  "shared_network_critical_threshold": "95",
+  "slack_webhook_url": "",
+  "slack_alert_channel": "",
+  "email_alert_to": "",
+  "sms_alert_to": ""
+}
