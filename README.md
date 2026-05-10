@@ -52,11 +52,8 @@ sudo apt install -y isc-dhcp-server
 git clone https://github.com/khalidalqassabi/glass-isc-dhcp.git /opt/glass-dhcp
 cd /opt/glass-dhcp
 
-# Install backend dependencies
+# Install dependencies (frontend already pre-built)
 npm install
-
-# Build the Angular UI
-npm run build:ui:prod
 ```
 
 ### 3. Configure
